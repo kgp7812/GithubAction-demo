@@ -1,5 +1,5 @@
 name: First Workflow
-on: workflow_dispatch
+on: push
 jobs:
   first-job:
     runs-on: ubuntu-latest
@@ -7,7 +7,7 @@ jobs:
       - name: Print greeting
         run: |
            echo "Hello World!"
-           echo "Hello 3"  
+           echo "Hello 4"  
       - name: Print goodbye
         run: echo "Done - bye!"
 
