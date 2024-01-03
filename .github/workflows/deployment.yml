@@ -6,16 +6,12 @@ jobs:
     steps:
       - name: Get code
         uses: actions/checkout@v3
-      - name: Get app code
-        uses: actions/checkout@v3
-        with:
-           path: '$GITHUB_WORKSPACE/02FinishedProject'
       - name: Install NodeJS
         uses: actions/setup-node@v3
         with:
           node-version: 18
       - name: Install dependencies
-        run:  npm@5
+        run:  npm ci
       - name: Run tests
         run: npm test
  
